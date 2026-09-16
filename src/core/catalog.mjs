@@ -381,7 +381,7 @@ export const catalog = [
   [
     "İstatistik",
     "davet-top",
-    "Statistics botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "Statistics botu. Alternatif: topinvite",
     "davet-top"
   ],
   [
@@ -411,7 +411,7 @@ export const catalog = [
   [
     "İstatistik",
     "yayın-top",
-    "Statistics botu. Alternatif: yayintop",
+    "Statistics botu. Alternatif: yayintop, topstreaming",
     "yayın-top"
   ],
   [

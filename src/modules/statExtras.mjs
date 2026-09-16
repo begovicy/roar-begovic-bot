@@ -109,6 +109,7 @@ export async function install(ctx) {
       ),
     );
   });
+  ctx.alias(["topinvite"], "davet-top");
   ctx.event("guildMemberUpdate", async (old, m) => {
     if (m.guild.id !== c.guildId) return;
     const added = m.roles.cache
