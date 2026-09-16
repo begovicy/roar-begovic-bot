@@ -619,7 +619,7 @@ export function installRooms(ctx) {
           await db
             .collection("rooms")
             .updateOne({ _id: r._id }, { $set: { emptySince: new Date() } });
-        else if (Date.now() - r.emptySince >= 60000) {
+        else if (Date.now() - r.emptySince >= 10000) {
           await ch.delete("ROAR boş oda temizliği");
           await db.collection("rooms").deleteOne({ _id: r._id });
         }
