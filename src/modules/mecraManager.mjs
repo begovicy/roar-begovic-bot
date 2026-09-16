@@ -171,6 +171,16 @@ export async function install(ctx) {
             ),
             reason: "ROAR oda paneli ikon kurulumu",
           });
+        else
+          await emoji.edit({
+            attachment: fs.readFileSync(
+              new URL(
+                "../../assets/room-icons/" + action + ".png",
+                import.meta.url,
+              ),
+            ),
+            reason: "ROAR oda paneli ikonlarını yenileme",
+          });
         await db
           .collection("uiAssets")
           .updateOne(
