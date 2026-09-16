@@ -20,6 +20,11 @@ import {
   id,
 } from "../core/util.mjs";
 import { roomPanel, roomInteraction, installRooms } from "./rooms.mjs";
+import { catalog } from "../core/catalog.mjs";
+
+async function log(ctx, guild, title, text) {
+  const ch = await guild.channels.fetch(ctx.c.logChannelId).catch(() => null);
+  if (ch?.isTextBased())
     await ch
       .send(embed(title, text))
       .catch(() => ctx.report("Log mesajı gönderilemedi"));
@@ -46,6 +51,7 @@ function helpView(token, category, pageIndex = 0) {
       ),
       row(
         button(`m:${token}:helpPage:0`, "İlk"),
+        button(`m:${token}:helpPage:${Math.max(0, p - 1)}`, "Önceki"),
         { ...button("noop", `${p + 1}/${pages}`), disabled: true },
         button(`m:${token}:helpPage:${Math.min(p + 1, pages - 1)}`, "Sonraki"),
         button(`m:${token}:helpPage:${pages - 1}`, "Son"),
@@ -67,21 +73,7 @@ export async function install(ctx) {
     await m.reply(helpView(token, "Kullanıcı"));
   });
   ctx.add(["ping"], async (m) =>
-    {
-      const startedAt = Date.now();
-      const stats = client.pingStats?.(m) || {
-        local: 0,
-        api: Math.round(client.ws?.ping ?? -1),
-        lag: 0,
-      };
-      const response = await m.reply(
-        embed(
-          "ROAR bağlantı durumu",
-          "Bot cache: **0 ms**",
-        ),
-      );
-      return response;
-    },
+    m.reply(embed("ROAR bağlantı durumu", "Bot cache: **0 ms**")),
   );
   ctx.add(["kurulum", "setup"], async (m) => {
     await authorize(ctx, m, null, true);
