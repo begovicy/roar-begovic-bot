@@ -361,6 +361,102 @@ export const catalog = [
     "tani"
   ],
   [
+    "Yönetim",
+    "yasaklamalar",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "yasaklamalar"
+  ],
+  [
+    "Yönetim",
+    "taşı",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "taşı"
+  ],
+  [
+    "Yönetim",
+    "cezaişlemleri",
+    "Manager botu. Alternatif: ceza işlemleri",
+    "cezaişlemleri"
+  ],
+  [
+    "Yönetim",
+    "cezalartemizle",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "cezalartemizle"
+  ],
+  [
+    "Yönetim",
+    "untimeoutall",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "untimeoutall"
+  ],
+  [
+    "Yönetim",
+    "unjailall",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "unjailall"
+  ],
+  [
+    "Yönetim",
+    "not",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "not"
+  ],
+  [
+    "Yönetim",
+    "notlar",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "notlar"
+  ],
+  [
+    "Yönetim",
+    "not-temizle",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "not-temizle"
+  ],
+  [
+    "Yönetim",
+    "toplantıçağır",
+    "Manager botu. Alternatif: yetkiliçağır",
+    "toplantıçağır"
+  ],
+  [
+    "Yönetim",
+    "kanal",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "kanal"
+  ],
+  [
+    "Yönetim",
+    "rolbilgi",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "rolbilgi"
+  ],
+  [
+    "Yönetim",
+    "rolsay",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "rolsay"
+  ],
+  [
+    "Yönetim",
+    "sesli",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "sesli"
+  ],
+  [
+    "Yönetim",
+    "emojilistele",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "emojilistele"
+  ],
+  [
+    "Yönetim",
+    "stickeroluştur",
+    "Manager botu. Kullanım ve izinler: docs/KOMUTLAR.md.",
+    "stickeroluştur"
+  ],
+  [
     "İstatistik",
     "stat",
     "Statistics botu. Alternatif: me, stats",

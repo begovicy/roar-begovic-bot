@@ -1,6 +1,6 @@
 # ROAR v0.3 — Komutlar
 
-92 ana komut; takma adlar ayrıca sayılmaz. Bütün komutlar slash değil, önek komutudur. Varsayılan önek `.`.
+108 ana komut; takma adlar ayrıca sayılmaz. Bütün komutlar slash değil, önek komutudur. Varsayılan önek `.`.
 
 | Bot | Komut | Alternatifler |
 |---|---|---|
@@ -64,6 +64,22 @@
 | manager | `.vip` |  |
 | manager | `.url` |  |
 | manager | `.tani` | tanı |
+| manager | `.yasaklamalar` |  |
+| manager | `.taşı` |  |
+| manager | `.cezaişlemleri` | ceza işlemleri |
+| manager | `.cezalartemizle` |  |
+| manager | `.untimeoutall` |  |
+| manager | `.unjailall` |  |
+| manager | `.not` |  |
+| manager | `.notlar` |  |
+| manager | `.not-temizle` |  |
+| manager | `.toplantıçağır` | yetkiliçağır |
+| manager | `.kanal` |  |
+| manager | `.rolbilgi` |  |
+| manager | `.rolsay` |  |
+| manager | `.sesli` |  |
+| manager | `.emojilistele` |  |
+| manager | `.stickeroluştur` |  |
 | statistics | `.stat @üye 7` | me, stats |
 | statistics | `.top` | sıralama |
 | statistics | `.davet` | invites |

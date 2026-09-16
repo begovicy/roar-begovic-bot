@@ -7,6 +7,7 @@ export const moduleGroups = {
     "community",
     "communityOps",
     "mecraManager",
+    "requested-commands",
   ],
   statistics: ["statistics", "statExtras", "statDetails"],
   economy: ["economy", "economyExtras"],

@@ -205,7 +205,7 @@ try {
   await (await import(`./modules/${role}.mjs`)).install(ctx);
   const moduleMap = {
     voucher: [],
-    manager: ["penalties", "booster", "community", "communityOps", "mecraManager"],
+    manager: ["penalties", "booster", "community", "communityOps", "mecraManager", "requested-commands"],
     main: ["economy", "extreme-ping", "pvp", "wealth", "shop"],
     economy: ["economyExtras"],
     statistics: ["statExtras", "statDetails"],
