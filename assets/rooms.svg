@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="576" viewBox="0 0 1120 576">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061b31"/>
+      <stop offset="0.52" stop-color="#0a2945"/>
+      <stop offset="1" stop-color="#061522"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#163b5d" stop-opacity=".86"/>
+      <stop offset="1" stop-color="#0b2238" stop-opacity=".88"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#59a9ff"/>
+      <stop offset="1" stop-color="#87d7ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#020b16" flood-opacity=".42"/>
+    </filter>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse" patternTransform="rotate(18)">
+      <path d="M0 0H42M0 0V42" fill="none" stroke="#6bbfff" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+  <rect width="1120" height="576" rx="22" fill="url(#bg)"/>
+  <rect x="18" y="18" width="1084" height="540" rx="18" fill="url(#grid)"/>
+  <path d="M0 410C220 330 330 520 560 430S900 310 1120 400V576H0Z" fill="#030d1a" opacity=".36"/>
+  <path d="M55 121H420M700 121H1065" stroke="#6ab7f5" stroke-opacity=".46"/>
+  <rect x="498" y="25" width="124" height="72" rx="18" fill="#0d3558" stroke="#55b5ff" stroke-opacity=".7" filter="url(#shadow)"/>
+  <text x="560" y="71" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#70c9ff" letter-spacing="2">ROAR</text>
+  <text x="560" y="121" text-anchor="middle" font-family="Arial, sans-serif" font-size="31" font-weight="800" fill="#f2f7fc" letter-spacing="1">ÖZEL ODA SİSTEMİ</text>
+  <rect x="54" y="151" width="7" height="38" rx="3" fill="url(#accent)"/>
+  <text x="78" y="176" font-family="Arial, sans-serif" font-size="22" font-weight="800" fill="#f6fbff">Merhaba ROAR üyeleri,</text>
+  <text x="54" y="207" font-family="Arial, sans-serif" font-size="15" fill="#b8d0e4">Sunucumuzda kalabalık odalar yerine kendinize özel bir ses kanalı oluşturabilirsiniz.</text>
+  <text x="54" y="229" font-family="Arial, sans-serif" font-size="15" fill="#b8d0e4">Oluşturduktan sonra aşağıdaki butonlarla odanızı kolayca yönetin.</text>
+
+  <g font-family="Arial, sans-serif">
+    <g filter="url(#shadow)">
+      <rect x="54" y="258" width="324" height="87" rx="14" fill="url(#card)" stroke="#6ea6d2" stroke-opacity=".42"/>
+      <rect x="398" y="258" width="324" height="87" rx="14" fill="url(#card)" stroke="#6ea6d2" stroke-opacity=".42"/>
+      <rect x="742" y="258" width="324" height="87" rx="14" fill="url(#card)" stroke="#6ea6d2" stroke-opacity=".42"/>
+      <rect x="54" y="359" width="324" height="87" rx="14" fill="url(#card)" stroke="#6ea6d2" stroke-opacity=".42"/>
+      <rect x="398" y="359" width="324" height="87" rx="14" fill="url(#card)" stroke="#6ea6d2" stroke-opacity=".42"/>
+      <rect x="742" y="359" width="324" height="87" rx="14" fill="url(#card)" stroke="#6ea6d2" stroke-opacity=".42"/>
+      <rect x="54" y="460" width="324" height="87" rx="14" fill="url(#card)" stroke="#6ea6d2" stroke-opacity=".42"/>
+      <rect x="398" y="460" width="324" height="87" rx="14" fill="url(#card)" stroke="#6ea6d2" stroke-opacity=".42"/>
+      <rect x="742" y="460" width="324" height="87" rx="14" fill="url(#card)" stroke="#6ea6d2" stroke-opacity=".42"/>
+    </g>
+    <g fill="#f4f9ff" font-size="18" font-weight="800">
+      <text x="78" y="291">✎  Oda İsim Ayarla</text>
+      <text x="422" y="291">♧  Oda Limit Ayarla</text>
+      <text x="766" y="291">ⓘ  Oda Bilgisi</text>
+      <text x="78" y="392">♕  Sahipliği Devret</text>
+      <text x="422" y="392">♙  Kullanıcı İzin Ver</text>
+      <text x="766" y="392">♙  Üye Yasakla</text>
+      <text x="78" y="493">▣  Odayı Kilitle / Aç</text>
+      <text x="422" y="493">◉  Odayı Gizle / Göster</text>
+      <text x="766" y="493">▣  Odayı Sil</text>
+    </g>
+    <g fill="#b9cfe0" font-size="13">
+      <text x="78" y="320">Odan için kısa ve özel bir isim seç.</text>
+      <text x="422" y="320">Odaya girecek kişi sayısını belirle.</text>
+      <text x="766" y="320">Odan hakkında detaylı bilgi al.</text>
+      <text x="78" y="421">Odanın sahipliğini başkasına ver.</text>
+      <text x="422" y="421">Belirli kişilerin girmesine izin ver.</text>
+      <text x="766" y="421">İstemediğin kişiyi odandan yasakla.</text>
+      <text x="78" y="522">İstediğinde kilitle veya herkese aç.</text>
+      <text x="422" y="522">Odanın görünürlüğünü ayarla.</text>
+      <text x="766" y="522">Odanı kalıcı olarak sil.</text>
+    </g>
+  </g>
+</svg>
