@@ -212,8 +212,23 @@ try {
     guard: ["guardExtras"],
     moderation: [],
   };
-  for (const name of (moduleMap[role] || []))
-    await (await import(`./modules/${name}.mjs`)).install(ctx);
+  for (const name of moduleMap[role] || []) {
+    const module = await import(`./modules/${name}.mjs`);
+    if (role === "main" && name === "economy") {
+      const serviceOnly = Object.create(ctx);
+      serviceOnly.add = () => {};
+      serviceOnly.onInteraction = () => {};
+      serviceOnly.every = () => {};
+      Object.defineProperty(serviceOnly, "economy", {
+        configurable: true,
+        get: () => ctx.economy,
+        set: (value) => {
+          ctx.economy = value;
+        },
+      });
+      await module.install(serviceOnly);
+    } else await module.install(ctx);
+  }
   client.once("clientReady", async () => {
     try {
       if (!client.guilds.cache.has(c.guildId))
