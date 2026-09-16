@@ -52,7 +52,7 @@ export function install(ctx) {
   ctx.replace(["ping", "p"], async (m) => {
     const sent = await instantReply(
       m,
-      `Pong!\nBot/cache: **0ms**\nDiscord WebSocket: **${Math.max(0, Math.round(ctx.client.ws?.ping ?? 0))}ms**`,
+      "Pong!\nBot cache: **0ms**",
     );
     return sent;
   });

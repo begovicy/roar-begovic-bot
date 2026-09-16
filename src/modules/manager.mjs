@@ -20,11 +20,6 @@ import {
   id,
 } from "../core/util.mjs";
 import { roomPanel, roomInteraction, installRooms } from "./rooms.mjs";
-import { catalog } from "../core/catalog.mjs";
-
-async function log(ctx, guild, title, text) {
-  const ch = await guild.channels.fetch(ctx.c.logChannelId).catch(() => null);
-  if (ch?.isTextBased())
     await ch
       .send(embed(title, text))
       .catch(() => ctx.report("Log mesajı gönderilemedi"));
@@ -82,10 +77,7 @@ export async function install(ctx) {
       const response = await m.reply(
         embed(
           "ROAR bağlantı durumu",
-            "Bot/cache: **0 ms**\n" +
-            `Discord WebSocket: **${stats.api < 0 ? "ölçülüyor" : `${stats.api} ms`}**\n` +
-            `Event loop gecikmesi: **${stats.lag} ms**\n\n` +
-            "Bot yanıtı/cache değeri 0 ms olabilir; Discord WebSocket değeri ayrı ölçülür.",
+          "Bot cache: **0 ms**",
         ),
       );
       return response;
