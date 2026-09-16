@@ -1,0 +1,3 @@
+import test from'node:test';import assert from'node:assert/strict';import{caseText}from'../src/modules/casePanels.mjs';
+test('expired active case is not described as currently active',()=>{const s=caseText({_id:'x',userId:'u',actorId:'a',type:'cmute',status:'active',expiresAt:new Date(1000),at:new Date(0),reason:'Test'},2000);assert.ok(s.includes('Süresi doldu; kaldırma kontrolü bekliyor'));});
+test('case detail includes persistent number and reason',()=>{const s=caseText({_id:'x',caseNo:42,userId:'u',actorId:'a',type:'vmute',status:'revoked',at:new Date(1000),reason:'Sebep'});assert.ok(s.includes('42'));assert.ok(s.includes('Sebep'));assert.ok(s.includes('revoked'));});

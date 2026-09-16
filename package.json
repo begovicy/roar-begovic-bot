@@ -1,0 +1,31 @@
+{
+  "name": "roar-begovic",
+  "version": "1.0.0-birlesik-final",
+  "private": true,
+  "description": "ROAR — Birleşik Final Sürüm (v0.1 + v0.2 + v0.3 + v0.4)",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "start": "node scripts/start-all.mjs",
+    "start:vds": "node index.js",
+    "start:all": "node scripts/start-all.mjs",
+    "start:pm2": "pm2 start ecosystem.config.cjs",
+    "manager": "node src/app.mjs manager",
+    "statistics": "node src/app.mjs statistics",
+    "economy": "node src/app.mjs economy",
+    "guard": "node src/app.mjs guard",
+    "test": "node --import ./tests/register.mjs --test tests/case-panels.test.mjs tests/core.test.mjs tests/expanded.test.mjs tests/finance.test.mjs tests/mecra.test.mjs tests/rooms.test.mjs tests/stat-details.test.mjs",
+    "check": "node scripts/check.mjs",
+    "build:catalog": "node --import ./tests/register.mjs scripts/catalog.mjs",
+    "preflight": "node scripts/preflight.mjs",
+    "preview": "node scripts/preview.mjs"
+  },
+  "dependencies": {
+    "discord.js": "14.27.0",
+    "eris": "^0.18.0",
+    "mongodb": "6.20.0",
+    "sharp": "0.34.3"
+  }
+}

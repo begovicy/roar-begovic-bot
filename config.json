@@ -1,0 +1,68 @@
+{
+  "brand": "ROAR",
+  "credit": "begovic",
+  "prefix": ".",
+  "logChannelId": "",
+  "guardLogChannelId": "",
+  "privateRoomCategoryId": "",
+  "privateRoomLobbyId": "",
+  "ignoredStatChannelIds": [],
+  "allowedRoleIds": [],
+  "colorRoles": [
+    {
+      "name": "Siyah",
+      "emoji": "",
+      "id": ""
+    },
+    {
+      "name": "Beyaz",
+      "emoji": "",
+      "id": ""
+    },
+    {
+      "name": "Kırmızı",
+      "emoji": "",
+      "id": ""
+    },
+    {
+      "name": "Mavi",
+      "emoji": "",
+      "id": ""
+    },
+    {
+      "name": "Mor",
+      "emoji": "",
+      "id": ""
+    }
+  ],
+  "guardSafeUserIds": [],
+  "guardWindowSeconds": 60,
+  "guardAlertThreshold": 3,
+  "dailyReward": 1000,
+  "maxBet": 1000000,
+  "gameTimeoutSeconds": 180,
+  "jailRoleId": "",
+  "textMuteRoleId": "",
+  "registeredRoleId": "",
+  "unregisteredRoleId": "",
+  "staffRoleIds": [],
+  "tagRoleId": "",
+  "boosterShareLimit": 12,
+  "confessionReviewChannelId": "",
+  "confessionPublishChannelId": "",
+  "applicationLogChannelId": "",
+  "guardMode": "observe",
+  "guardEnforceActions": [
+    10,
+    11,
+    12,
+    30,
+    31,
+    32
+  ],
+  "guardSafeBotIds": [],
+  "shopItems": [],
+  "jailChannelId": "",
+  "snipeEnabled": false,
+  "vipRoleId": ""
+}
