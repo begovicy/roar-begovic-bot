@@ -445,21 +445,26 @@ export async function install(ctx) {
     }
     const s = await readSession(ctx, i, token);
     if (s.kind === "help") {
+      const selectedCategory = i.values?.[0];
       const category =
-        action === "helpCategory" ? i.values[0] : s.data.category;
+        action === "helpCategory" ? String(selectedCategory || "") : s.data.category;
       if (!catalog.some((x) => x[0] === category))
         throw Error("Kategori bulunamadı.");
-      await db
+      const page = action === "helpPage" ? Number(arg) : 0;
+      const view = helpView(token, category, page);
+      const persist = db
         .collection("sessions")
-        .updateOne({ _id: token }, { $set: { "data.category": category } });
-      const view = helpView(
-        token,
-        category,
-        action === "helpPage" ? Number(arg) : 0,
-      );
-      if (typeof i.update === "function") return i.update(view);
+        .updateOne({ _id: token }, { $set: { "data.category": category } })
+        .catch((e) => ctx.report("Yardım oturumu güncellenemedi", e));
+      if (typeof i.update === "function") {
+        await i.update(view);
+        await persist;
+        return;
+      }
       await i.deferUpdate();
-      return i.editReply(view);
+      await i.editReply(view);
+      await persist;
+      return;
     }
     if (s.kind === "move") {
       await i.deferUpdate();
