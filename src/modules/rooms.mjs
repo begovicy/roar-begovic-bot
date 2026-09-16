@@ -593,7 +593,7 @@ export function installRooms(ctx) {
       }
     });
   });
-  ctx.every(30000, async () => {
+  ctx.every(1000, async () => {
     const guild = ctx.client.guilds.cache.get(c.guildId);
     if (!guild) return;
     const rooms = await db
