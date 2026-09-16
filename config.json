@@ -4,8 +4,9 @@
   "prefix": ".",
   "logChannelId": "",
   "guardLogChannelId": "",
-  "privateRoomCategoryId": "",
-  "privateRoomLobbyId": "",
+  "privateRoomCategoryId": "1549884232547967008",
+  "privateRoomLobbyId": "1549884280044523553",
+  "privateRoomManagementChannelId": "1549884413964197988",
   "ignoredStatChannelIds": [],
   "allowedRoleIds": [],
   "colorRoles": [

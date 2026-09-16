@@ -78,6 +78,7 @@ export function config({ requireSecrets = true } = {}) {
     "guardLogChannelId",
     "privateRoomCategoryId",
     "privateRoomLobbyId",
+    "privateRoomManagementChannelId",
   ])
     if (c[key] && !validId(c[key])) throw Error("Geçersiz ID: " + key);
   for (const key of [

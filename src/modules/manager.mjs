@@ -357,7 +357,12 @@ export async function install(ctx) {
     await authorize(ctx, m, null, true);
     if (!c.privateRoomLobbyId)
       throw Error("Özel oda giriş kanalı ayarlanmalı.");
-    await m.channel.send(await roomPanel(ctx));
+    const target = c.privateRoomManagementChannelId
+      ? await m.guild.channels.fetch(c.privateRoomManagementChannelId)
+      : m.channel;
+    if (!target?.isTextBased())
+      throw Error("Özel oda yönetim kanalı metin kanalı olmalı.");
+    await target.send(await roomPanel(ctx));
   });
   async function moveRequest(m, a, mode) {
     const uid = snowflake(a[0]);

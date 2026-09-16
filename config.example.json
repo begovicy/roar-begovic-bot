@@ -6,6 +6,7 @@
   "guardLogChannelId": "",
   "privateRoomCategoryId": "",
   "privateRoomLobbyId": "",
+  "privateRoomManagementChannelId": "",
   "ignoredStatChannelIds": [],
   "allowedRoleIds": [],
   "colorRoles": [
