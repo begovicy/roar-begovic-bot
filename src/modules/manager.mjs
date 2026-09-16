@@ -445,7 +445,6 @@ export async function install(ctx) {
     }
     const s = await readSession(ctx, i, token);
     if (s.kind === "help") {
-      await i.deferUpdate();
       const category =
         action === "helpCategory" ? i.values[0] : s.data.category;
       if (!catalog.some((x) => x[0] === category))
@@ -453,9 +452,14 @@ export async function install(ctx) {
       await db
         .collection("sessions")
         .updateOne({ _id: token }, { $set: { "data.category": category } });
-      return i.editReply(
-        helpView(token, category, action === "helpPage" ? Number(arg) : 0),
+      const view = helpView(
+        token,
+        category,
+        action === "helpPage" ? Number(arg) : 0,
       );
+      if (typeof i.update === "function") return i.update(view);
+      await i.deferUpdate();
+      return i.editReply(view);
     }
     if (s.kind === "move") {
       await i.deferUpdate();

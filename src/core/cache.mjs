@@ -131,14 +131,14 @@ export function withCache(db) {
         async findOneAndUpdate(filter, update, options) {
           // Update işlemi
           const result = await rawCollection.findOneAndUpdate(filter, update, options);
-          cache.invalidate(name, filter);
+          cache.invalidate(name);
           return result;
         },
 
         async updateOne(filter, update, options) {
           // Update sonrası cache invalidate
           const result = await rawCollection.updateOne(filter, update, options);
-          cache.invalidate(name, filter);
+          cache.invalidate(name);
           return result;
         },
 
@@ -162,13 +162,13 @@ export function withCache(db) {
 
         async deleteOne(filter, options) {
           const result = await rawCollection.deleteOne(filter, options);
-          cache.invalidate(name, filter);
+          cache.invalidate(name);
           return result;
         },
 
         async findOneAndDelete(filter, options) {
           const result = await rawCollection.findOneAndDelete(filter, options);
-          cache.invalidate(name, filter);
+          cache.invalidate(name);
           return result;
         },
 
