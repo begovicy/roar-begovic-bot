@@ -206,7 +206,7 @@ try {
   const moduleMap = {
     voucher: [],
     manager: ["penalties", "booster", "community", "communityOps", "mecraManager"],
-    main: ["extreme-ping", "pvp", "wealth", "shop"],
+    main: ["economy", "extreme-ping", "pvp", "wealth", "shop"],
     economy: ["economyExtras"],
     statistics: ["statExtras", "statDetails"],
     guard: ["guardExtras"],

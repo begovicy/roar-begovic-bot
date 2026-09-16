@@ -166,6 +166,12 @@ export function withCache(db) {
           return result;
         },
 
+        async findOneAndDelete(filter, options) {
+          const result = await rawCollection.findOneAndDelete(filter, options);
+          cache.invalidate(name, filter);
+          return result;
+        },
+
         async deleteMany(filter, options) {
           const result = await rawCollection.deleteMany(filter, options);
           cache.invalidate(name);
@@ -183,6 +189,10 @@ export function withCache(db) {
         // Tüm diğer MongoDB collection metodlarını proxy et
         ...rawCollection
       };
+    },
+
+    command(...args) {
+      return db.command(...args);
     },
 
     // Raw DB access (bypass cache)

@@ -16,7 +16,7 @@ export async function connect(c) {
       retryWrites: true,
       retryReads: true,
       w: "majority",
-      readPreference: "primaryPreferred",
+      readPreference: "primary",
       compressors: ["zlib"],
       zlibCompressionLevel: 6,
     });

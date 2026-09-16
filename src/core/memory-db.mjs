@@ -115,6 +115,15 @@ export function memoryDB() {
             }
             return { deletedCount: 0 };
           },
+          async findOneAndDelete(filter) {
+            for (const [id, doc] of coll) {
+              if (matchesFilter(doc, filter)) {
+                coll.delete(id);
+                return { value: { ...doc } };
+              }
+            }
+            return { value: null };
+          },
           async deleteMany(filter) {
             let count = 0;
             const toDelete = [];
@@ -131,6 +140,10 @@ export function memoryDB() {
             return "memory-index";
           },
         };
+      },
+      async command(cmd) {
+        if (cmd?.hello === 1) return { msg: "isdbgrid" };
+        return {};
       },
     },
     tx: async (fn) => {
