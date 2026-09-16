@@ -285,9 +285,9 @@ export async function install(ctx) {
   ctx.onInteraction(async (i) => {
     const [, token, v, a] = i.customId.split(":");
     if (["daily", "history"].includes(v)) {
+      await i.deferReply({ flags: EPH });
       const s = await readSession(ctx, i, token);
       if (s.kind !== "wallet") throw Error("Geçersiz menü.");
-      await i.deferReply({ flags: EPH });
       if (v === "daily") {
         const r = await daily(i.user.id);
         return i.editReply({
