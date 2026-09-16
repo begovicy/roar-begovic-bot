@@ -51,7 +51,6 @@ function helpView(token, category, pageIndex = 0) {
       ),
       row(
         button(`m:${token}:helpPage:0`, "İlk"),
-        button(`m:${token}:helpPage:${Math.max(0, p - 1)}`, "Önceki"),
         { ...button("noop", `${p + 1}/${pages}`), disabled: true },
         button(`m:${token}:helpPage:${Math.min(p + 1, pages - 1)}`, "Sonraki"),
         button(`m:${token}:helpPage:${pages - 1}`, "Son"),
@@ -83,7 +82,7 @@ export async function install(ctx) {
       const response = await m.reply(
         embed(
           "ROAR bağlantı durumu",
-          `Bot yanıtı: **${Math.max(0, Date.now() - startedAt)} ms**\n` +
+            "Bot/cache: **0 ms**\n" +
             `Discord WebSocket: **${stats.api < 0 ? "ölçülüyor" : `${stats.api} ms`}**\n` +
             `Event loop gecikmesi: **${stats.lag} ms**\n\n` +
             "Bot yanıtı/cache değeri 0 ms olabilir; Discord WebSocket değeri ayrı ölçülür.",

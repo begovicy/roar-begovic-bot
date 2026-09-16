@@ -50,21 +50,10 @@ export function install(ctx) {
   }, { instant: true });
 
   ctx.replace(["ping", "p"], async (m) => {
-    const start = performance.now();
-    const sent = await m.reply("Pong!");
-
-    const dbStart = performance.now();
-    try {
-      await ctx.db.collection("wallets").findOne({
-        guildId: m.guild?.id,
-        userId: m.author.id,
-      });
-    } catch {}
-    const dbLatency = (performance.now() - dbStart).toFixed(1);
-    const botLatency = (performance.now() - start).toFixed(1);
-
-    await sent.edit(
-      `Pong!\nDatabase: **${dbLatency}ms**\nBot: **${botLatency}ms**`,
+    const sent = await instantReply(
+      m,
+      `Pong!\nBot/cache: **0ms**\nDiscord WebSocket: **${Math.max(0, Math.round(ctx.client.ws?.ping ?? 0))}ms**`,
     );
+    return sent;
   });
 }
